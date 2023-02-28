@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- paddings -->
+    <dimen name="default_padding">16dp</dimen>>
+    <dimen name="text_view_name_padding">16dp</dimen>
+
+    <!-- margins -->
+    <dimen name="margin_top_buttons">16dp</dimen>
+    <dimen name="margin_bottom_buttons">44dp</dimen>
+    <dimen name="avatars_margin">4dp</dimen>
+    <dimen name="nickname_margin">8dp</dimen>
+    <dimen name="recycler_view_margin">32dp</dimen>
+    <dimen name="item_list_text_margin_start">32dp</dimen>
+    <dimen name="item_list_margin_bottom">12dp</dimen>
+
+    <!-- Image/Shape sizes -->
+    <dimen name="round_shape_size">60dp</dimen>
+    <dimen name="avatar_size">80dp</dimen>
+    <dimen name="minimize_height">40dp</dimen>
+    <dimen name="minimize_width">64dp</dimen>
+    <dimen name="vector_size_default">32dp</dimen>
+    <dimen name="text_view_vector_size">12dp</dimen>
+    <dimen name="item_list_image_size">60dp</dimen>
+
+    <!-- Text sizes -->
+    <dimen name="item_list_name_size">16sp</dimen>
+    <dimen name="item_list_info_size">12sp</dimen>
+    <dimen name="phone_book_heading_size">32sp</dimen>
+</resources>

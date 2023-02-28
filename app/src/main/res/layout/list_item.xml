@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_list_image_size"
+    android:layout_marginBottom="@dimen/recycler_view_margin"
+    android:orientation="horizontal">
+
+    <!-- Round image -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/view"
+        android:layout_width="@dimen/item_list_image_size"
+        android:layout_height="@dimen/item_list_image_size"
+        android:layout_alignParentStart="true"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/circular" />
+
+    <!-- Name -->
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/item_list_text_margin_start"
+        android:layout_toEndOf="@id/view"
+        android:maxLength="80"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:textSize="@dimen/item_list_name_size" />
+
+    <!-- Info -->
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/item_list_text_margin_start"
+        android:layout_marginBottom="@dimen/item_list_margin_bottom"
+        android:layout_toEndOf="@id/view"
+        android:textSize="@dimen/item_list_info_size" />
+
+</RelativeLayout>

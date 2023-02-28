@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:padding="@dimen/default_padding"
+    tools:context=".MainActivity">
+
+    <!-- Top buttons -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_top_buttons">
+
+        <ImageView
+            android:id="@+id/arrowDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_down"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Message bubble -->
+        <ImageView
+            android:id="@+id/chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/arrowDown" />
+
+        <!-- Phone book button -->
+        <ImageView
+            android:id="@+id/people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/people"
+            app:layout_constraintEnd_toStartOf="@id/menu"
+            app:layout_constraintStart_toEndOf="@id/chat"
+            app:layout_constraintTop_toBottomOf="@id/arrowDown" />
+
+        <!-- Images swap button -->
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/arrowDown" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Top image -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:layout_marginTop="@dimen/avatars_margin"
+        android:layout_marginBottom="@dimen/avatars_margin"
+        android:layout_weight="1">
+
+        <!-- Blurred background -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/topAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/j"
+            app:shapeAppearanceOverlay="@style/corner_radius" />
+
+        <!-- Round image -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="@dimen/avatar_size"
+            android:layout_height="@dimen/avatar_size"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/j"
+            app:shapeAppearanceOverlay="@style/circular" />
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/textViewMic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginStart="@dimen/text_view_name_padding"
+            android:layout_marginEnd="@dimen/text_view_name_padding"
+            android:layout_marginBottom="@dimen/nickname_margin"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="You"
+            android:textColor="@color/white"
+            app:drawableRightCompat="@drawable/mic_off_text_view"
+            app:drawableTint="@color/white" />
+
+
+    </FrameLayout>
+
+    <!-- Bottom image -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/avatars_margin"
+        android:layout_marginBottom="@dimen/avatars_margin"
+        android:layout_weight="1">
+
+        <!-- Blurred background -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bottomAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/b"
+            app:shapeAppearanceOverlay="@style/corner_radius" />
+
+        <!-- Round image -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="@dimen/avatar_size"
+            android:layout_height="@dimen/avatar_size"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/b"
+            app:shapeAppearanceOverlay="@style/circular" />
+
+        <!-- Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginStart="@dimen/text_view_name_padding"
+            android:layout_marginEnd="@dimen/text_view_name_padding"
+            android:layout_marginBottom="@dimen/nickname_margin"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Roshandiatellineshyaunneveshank Koyaanfskvatsiuti Williams"
+            android:textColor="@color/white"
+            app:drawableRightCompat="@drawable/mic_off_text_view"
+            app:drawableTint="@color/white" />
+
+
+    </FrameLayout>
+
+    <!-- Bottom buttons -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_bottom_buttons">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/minimize"
+            app:layout_constraintBottom_toTopOf="@id/camSwitcher"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Camera icon switcher -->
+        <ImageSwitcher
+            android:id="@+id/camSwitcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/micSwitcher"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_shape"
+                android:backgroundTint="@color/white"
+                android:scaleType="centerInside"
+                android:src="@drawable/videocam_off" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_shape"
+                android:scaleType="centerInside"
+                android:src="@drawable/videocam_on" />
+
+        </ImageSwitcher>
+
+        <!-- Microphone icon switcher -->
+        <ImageSwitcher
+            android:id="@+id/micSwitcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/wavingHand"
+            app:layout_constraintStart_toEndOf="@id/camSwitcher">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_shape"
+                android:backgroundTint="@color/white"
+                android:scaleType="centerInside"
+                android:src="@drawable/mic_off" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_shape"
+                android:scaleType="centerInside"
+                android:src="@drawable/mic_on" />
+
+        </ImageSwitcher>
+
+        <!-- Hand button -->
+        <ImageView
+            android:id="@+id/wavingHand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_shape"
+            android:scaleType="centerInside"
+            android:src="@drawable/waving_hand"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/callEnd"
+            app:layout_constraintStart_toEndOf="@id/micSwitcher" />
+
+        <!-- End call button -->
+        <ImageView
+            android:id="@+id/callEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_shape"
+            android:backgroundTint="@color/red"
+            android:scaleType="centerInside"
+            android:src="@drawable/call_end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/wavingHand" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
